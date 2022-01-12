@@ -1,0 +1,9 @@
+Option Explicit
+
+Sub MySub()
+
+Dim myPersons As Persons: Set myPersons = New Persons
+
+Stop
+
+End Sub
