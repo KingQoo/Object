@@ -1,0 +1,15 @@
+Option Explicit
+
+Private Sub Class_Initialize()
+    Set Items = New Collection
+    
+    With Sheet1
+        Dim i As Long: i = 2
+        Do While .Cells(i, 1).Value <> ""
+            Dim p As Person: Set p = New Person
+            p.Initialize .Range(.Cells(i, 1), .Cells(i, 4))
+            Items.Add p, p.Id
+            i = i + 1
+        Loop
+    End With
+End Sub
